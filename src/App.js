@@ -43,7 +43,7 @@ const App = ({ signOut }) => {
   async function createNote(event) {
     event.preventDefault();
     const form = new FormData(event.target);
-    const image = form.get('image')
+    const image = form.get('image');
     const data = {
       name: form.get('name'),
       description: form.get('description'),
@@ -120,7 +120,7 @@ const App = ({ signOut }) => {
                 style={{ width: 400 }}
               />
             )}
-            <Button variation='link' onClick={() => deleteNote}>
+            <Button variation='link' onClick={() => deleteNote(note)}>
               Delete Note
             </Button>
           </Flex>
